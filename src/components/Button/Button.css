@@ -1,0 +1,20 @@
+.button {
+    background-color: black;
+    background: linear-gradient(rgb(0, 0, 0),rgb(128, 128, 128));
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: cursive;
+    padding: 1em;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    margin: 20px 0;
+    height: 3em;
+    width: 100%;
+}
+
+.button:hover {
+    background: linear-gradient(rgb(112, 112, 112),rgb(255, 255, 255));
+    color: black;
+}

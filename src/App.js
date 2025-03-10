@@ -1,23 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import Banner from "./components/Banner/Banner";
+import Header from "./components/Header/Header";
+import Form from "./components/Form/Form"
+import { useState } from "react";
+import Section from "./components/Section/Section";
 
 function App() {
+
+  const [products, setProducts] = useState([]);
+
+  const addProduct = (product) => {
+    const brand = brands.find(branding => branding.name === product.brand);
+    const newProduct = { ...product, image_link: brand.image_link };
+    setProducts([...products, newProduct]);
+  }
+
+  const sections = [
+    { name: 'Computadores' },
+    { name: 'Acessórios' },
+    { name: 'Impressoras' },
+    { name: 'Games' },
+    { name: 'Gadgets' }
+  ];
+
+  const brands = [
+    { name: 'HP', image_link: 'public/images/hp.png' },
+    { name: 'Dell', image_link: 'public/images/dell.png' },
+    { name: 'Positivo', image_link: 'public/images/positivo.png' },
+    { name: 'Asus', image_link: 'public/images/asus.jpg' },
+    { name: 'Huawei', image_link: 'public/images/huawei.png' }
+  ];
+
+  const sectionList = sections.map(section => section.name);
+  const brandList = brands.map(brand => brand.name);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Banner />
+      <Form toRegistredProduct={addProduct} brands={brandList} sections={sectionList} />
+      {sections.map((section) => (
+        <Section key={section.name} 
+                 name={section.name}
+                 products={products.filter(product => product.section === section.name)} />
+      ))}
     </div>
   );
 }
