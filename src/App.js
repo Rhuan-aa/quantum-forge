@@ -27,7 +27,7 @@ function App() {
     { name: 'Dell', image_link: '/images/dell.png' },
     { name: 'Positivo', image_link: '/images/positivo.png' },
     { name: 'Asus', image_link: '/images/asus.jpg' },
-    { name: 'Huawei', image_link: '/images/huawei.png' }
+    { name: 'Huawei', image_link: '/images/hauwei.png' }
   ];
 
   const sectionList = sections.map(section => section.name);
