@@ -6,10 +6,11 @@ const Product = (props) => {
         <div className="product">
             <div className="header">
                 <img src={props.image_link} alt="logo-marca" />
+                {props.isUsed && <div className="used-badge">Usado</div>}
             </div>
             <div className="footer">
                 <h4>{props.name}</h4>
-                <h5>{props.brand}</h5>
+                {props.price && <div className="price">R$ {props.price}</div>}
             </div>
         </div>
     );

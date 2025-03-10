@@ -8,4 +8,11 @@
     width: 3em;
     height: auto;
     padding: 1.1em;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center center;
 }
+
+.header #icon:hover {
+    transform: scale(1.1);
+}
+

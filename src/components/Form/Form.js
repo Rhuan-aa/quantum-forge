@@ -4,6 +4,7 @@ import TextField from "../TextField/TextField";
 import DropDown from "../DropDown/DropDown";
 import Button from "../Button/Button";
 import PriceField from "../PriceField/PriceField";
+import SwitchButton from "../SwitchButton/SwitchButton";
 
 const Form = (props) => {
 
@@ -11,6 +12,7 @@ const Form = (props) => {
   const [brand, setBrand] = useState('Dell');
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
+  const [isUsed, setIsUsed] = useState(false);
   
 
   const onSave = (event) => {
@@ -21,9 +23,15 @@ const Form = (props) => {
         "section" : section,
         "brand" : brand,
         "name" : name,
-        "price" : price
+        "price" : price,
+        "isUsed" : isUsed
       }
     );
+    
+    // Limpar formulário após envio
+    setName('');
+    setPrice('');
+    setIsUsed(false);
   }
 
   return (
@@ -37,25 +45,33 @@ const Form = (props) => {
         <DropDown 
           label="Sessão" 
           itens={props.sections} 
-          toChanged={section => setSection}
+          toChanged={value => setSection(value)}
         />
 
         <DropDown 
           label="Marca" 
           itens={props.brands} 
-          toChanged={brand => setBrand}
+          toChanged={value => setBrand(value)}
         />
 
         <TextField 
           label="Nome" 
           placeholder="ex: Vivobook 15 X1504za"
-          toChanged={name => setName} 
+          value={name}
+          toChanged={value => setName(value)} 
         />
 
         <PriceField
           label="Preço"
           placeholder="100"
-          toChanged={price => setPrice}
+          value={price}
+          toChanged={value => setPrice(value)}
+        />
+
+        <SwitchButton
+          label="Produto Usado"
+          checked={isUsed}
+          onChange={value => setIsUsed(value)}
         />
 
         <Button>ENVIAR CADASTRO</Button>

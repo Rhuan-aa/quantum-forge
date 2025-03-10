@@ -1,6 +1,6 @@
 .button {
     background-color: black;
-    background: linear-gradient(rgb(0, 0, 0),rgb(128, 128, 128));
+    background: linear-gradient(rgb(128, 128, 128),rgb(0, 0, 0));
     border-radius: 10px;
     font-weight: 400;
     font-size: 14px;
@@ -15,6 +15,5 @@
 }
 
 .button:hover {
-    background: linear-gradient(rgb(112, 112, 112),rgb(255, 255, 255));
-    color: black;
+    background: linear-gradient(rgb(0, 150, 255), rgb(0, 100, 200));
 }

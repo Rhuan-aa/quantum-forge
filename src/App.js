@@ -23,11 +23,11 @@ function App() {
   ];
 
   const brands = [
-    { name: 'HP', image_link: 'public/images/hp.png' },
-    { name: 'Dell', image_link: 'public/images/dell.png' },
-    { name: 'Positivo', image_link: 'public/images/positivo.png' },
-    { name: 'Asus', image_link: 'public/images/asus.jpg' },
-    { name: 'Huawei', image_link: 'public/images/huawei.png' }
+    { name: 'HP', image_link: '/images/hp.png' },
+    { name: 'Dell', image_link: '/images/dell.png' },
+    { name: 'Positivo', image_link: '/images/positivo.png' },
+    { name: 'Asus', image_link: '/images/asus.jpg' },
+    { name: 'Huawei', image_link: '/images/huawei.png' }
   ];
 
   const sectionList = sections.map(section => section.name);

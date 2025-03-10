@@ -7,12 +7,14 @@ const Section = (props) => {
     <section className="section">
       <h3>{props.name}</h3>
       <div className="product-list">
-        {props.products.map((product) => (
+        {props.products.map((product, index) => (
           <Product
-            key={product.name}
+            key={`${product.name}-${index}`}
             name={product.name}
             brand={product.brand}
+            price={product.price}
             image_link={product.image_link}
+            isUsed={product.isUsed}
           />
         ))}
       </div>
