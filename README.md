@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Sistema de Cadastro de Produtos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição do Projeto
 
-## Available Scripts
+Este projeto é uma aplicação web desenvolvida em React, como avaliação da matéria programação web II (PRW2) do IFSP campus São Carlos, que permite o cadastro e a visualização de produtos organizados por seções. A aplicação possui uma interface intuitiva onde o usuário pode:
 
-In the project directory, you can run:
+- Cadastrar novos produtos através de um formulário
+- Categorizar produtos por seções (ex: Computadores)
+- Especificar marca, nome e preço do produto
+- Indicar se o produto é usado
+- Visualizar os produtos cadastrados agrupados por seção
 
-### `npm start`
+A interface é composta por um formulário de cadastro e uma área de exibição dos produtos, onde cada item é apresentado em um card com suas principais informações.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Componentes Principais
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Form**: Formulário para cadastro de novos produtos
+- **DropDown**: Seletor para escolha de seções e marcas
+- **TextField**: Campo para entrada de texto (nome do produto)
+- **PriceField**: Campo específico para entrada de valores monetários
+- **SwitchButton**: Botão de alternância para indicar se o produto é usado
+- **Section**: Container que agrupa produtos por categoria
+- **Product**: Card que exibe as informações de um produto
 
-### `npm test`
+### Características
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Design responsivo
+- Formulário com validação
+- Efeitos visuais de hover nos cards de produtos
+- Indicador visual para produtos usados
+- Organização por seções
 
-### `npm run build`
+## Integrantes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Rhuan Andrey de Andrade Boni (SC3043983)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deploy
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Link para a aplicação](https://quantum-forge.vercel.app)
 
-### `npm run eject`
+## Como Executar o Projeto Localmente
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone o repositório:
+```
+git clone https://github.com/Rhuan-aa/quantum-forge.git
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Instale as dependências:
+```
+cd quantum-forge
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Execute a aplicação:
+```
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Acesse a aplicação em seu navegador:
+```
+http://localhost:3000
+```
 
-## Learn More
+## Tecnologias Utilizadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React.js
+- CSS
+- JavaScript
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Estrutura de Arquivos
 
-### Code Splitting
+```
+src/
+├── components/
+│   ├── Button/
+│   ├── DropDown/
+│   ├── Form/
+│   ├── PriceField/
+│   ├── Product/
+│   ├── Section/
+│   ├── SwitchButton/
+│   └── TextField/
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Funcionalidades Futuras
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Implementação de edição de produtos
+- Sistema de busca e filtros
+- Armazenamento persistente dos dados
+- Melhorias na experiência do usuário
